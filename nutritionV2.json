@@ -1,0 +1,50 @@
+{
+  "v": 2.0,
+  "name": "Dark Chocolate Sunflower Seed Butter Cups",
+  "company": "Trader Joe's",
+  "nutrition": {
+    "servings": "1",
+    "serving_size": "2 pieces",
+    "serving_size_grams": "40g",
+    "calories": "230",
+    "fat": {
+      "total_fat": "18g",
+      "total_fat_dv": "23%",
+      "sat_fat": "7g",
+      "sat_fat_dv": "35%",
+      "trans_fat": "0g",
+    },
+    "cholesterol": "0mg",
+    "cholesterol_dv": "0%",
+    "sodium": "95mg",
+    "sodium_dv": "4%",
+    "carbohydrates": {
+      "total_carbohydrates": "18g",
+      "total_carbohydrates_dv": "6%",
+      "fiber": "3g",
+      "fiber_dv": "11%",
+      "total_sugars": "11g",
+      "added_sugars": "11g",
+      "added_sugars_dv": "22%",
+    },
+    "protein": "4g",
+    "vitamins_minerals": {
+      "vitamin_d_dv": "2%",
+      "calcium_dv": "2%",
+      "iron_dv": "20%",
+      "potassium_dv": "0%"
+    }
+  },
+  "ingredients": [
+    "Dark Chocolate (Cocoa Mass, Cane Sugar, Cocoa Butter)",
+    "Sunflower Seeds",
+    "Powdered Sugar (Cane Sugar, Tapioca Starch)",
+    "Cocoa Butter",
+    "Sea Salt"
+  ],
+  "kosher": true,
+  "vegan": true,
+  "vegetarian": true,
+  "gluten_free": true,
+  "fair_trade": true
+}
