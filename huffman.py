@@ -1,13 +1,13 @@
 from heapq import * 
+# used by train, no need to call directly
+
 class Node:
 	def __init__ (self, val):
 		self.val = val
 	def __lt__(self, other):
 		return self.val < other.val 
-    	# return comparison
 	def __eq__(self, other):
 		return self.val == other.val 
-		# return comparison
 
 class LeafNode(Node):
 	def __init__(self, letter, val):
@@ -28,16 +28,18 @@ class InternalNode(Node):
 	def print(self, path):
 		print("Freq:", self.val, "Path:", path)
 		for i in range(len(self.children)):
-			self.children[i].print(str(i) + path)
+			self.children[i].print(path+str(i))
 
 	def getPaths(self, path):
 		ret = []
 		for i in range(len(self.children)):
-			ret += self.children[i].getPaths(str(i) + path)
+			ret += self.children[i].getPaths(path+str(i))
 		return ret
 
 class Huffman:
-	# [(h, 4), (q, 17), (r, 19)] 
+	#tupleList should be in form [(char: string, frequency: int), ...]
+	#there is no need for the list to be in any particular order
+	#eg. [('h', 4), ('q', 17), ('r', 19)] 
 	def __init__(self, tupleList):
 		heap = []
 		for tup in tupleList:
@@ -47,14 +49,14 @@ class Huffman:
 			heappush(heap, leaf)
 
 		while (len(heap) > 1):
-			pushUsTogether = []
+			future_children = []
 			val = 0
 			for _ in range(9):
 				if len(heap) != 0:
 					popped = heap.pop(0)
-					pushUsTogether.append(popped)
+					future_children.append(popped)
 					val += popped.val
-			internal = InternalNode(val, pushUsTogether)
+			internal = InternalNode(val, future_children)
 			heappush(heap, internal)
 		self.root = heap[0]
 
